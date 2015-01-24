@@ -43,7 +43,7 @@ $(function () {
     var cardsLeftDiv = document.getElementById("cardsleft");
     var guardAreaDiv = document.getElementById("guardArea");
     var generalInfoBoxP= document.getElementById("generalinfobox");
-    var gameInfoBoxP= document.getElementById("gameinfobox");
+    var gameInfoBoxUl= document.getElementById("gameinfobox");
     var startButtonDiv = document.getElementById("startButton");
     var stopButtonDiv = document.getElementById("stopButton");
 
@@ -296,7 +296,7 @@ $(function () {
         $("#playerList").children(".playerName").remove();
 
         // haal de notificaties weg
-        gameInfoBoxP.innerHTML = "";
+        gameInfoBoxUl.innerHTML = "";
 
         // toon startknop
         startButtonDiv.style.display = "block";
@@ -311,7 +311,7 @@ $(function () {
     function spelStart(){
         startButtonDiv.style.display = "none";
         stopButtonDiv.style.display = "block";
-        gameInfoBoxP.innerHTML = "";
+        gameInfoBoxUl.innerHTML = "";
     }
 
     function updateStapelVoorraad(aantal) {
@@ -368,7 +368,7 @@ $(function () {
     }
 
     function gameinfo(bericht){
-        gameInfoBoxP.innerHTML = bericht + '<br>' + gameInfoBoxP.innerHTML;
+        gameInfoBoxUl.innerHTML = '<li>' + bericht + '</li>' + gameInfoBoxUl.innerHTML;
     }
 
 // ONDERSTEUNDENDE FUNCTIES, WORDEN OP MEERDERE MANIEREN GEBRUIKT

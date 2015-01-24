@@ -204,7 +204,6 @@ function startGame(){
 
     console.log("Het spel is gestart!");
     stuurSpelBericht('gameinfo', players ,{bericht: '--- Start van spel ---'});
-    stuurSpelBericht('gameinfo', players ,{bericht: ''});
     stuurSpelBericht('generalinfo', players ,{bericht: huidigeTijd() + ' Het spel is gestart!'});
 }
 
