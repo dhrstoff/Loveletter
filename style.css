@@ -10,20 +10,24 @@ body{
     background:#eee;
 }
 
-.sidebar{
-    min-height:100%;
-    width:19%;
+section{
+    width:100%;
     float:left;
-    text-align: center;
-    border-right: solid 1px #000;
-    box-shadow: 5px 0px 5px #000;
-    background:#fff;
+}
+
+section.top{
+    /*background-color:blue;*/
+}
+
+.sidebar{
+    
 }
 
 .playArea{
-    height:100%;
-    width:80%;
-    float:left;
+    float: left;
+    width:100%;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .guardArea{
@@ -40,21 +44,26 @@ body{
     width: 150px;
 }
 
-.infobox{
+.sidebarheader{
     height:100px;
     width:100%;
     color:#000;
     border-bottom: solid 1px;
 }
 
-.startButton{
-    width: 50%;
-    padding-top: 25px;
+.gameControl{
     float: left;
+    width:100%;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-.startButton button{
-    font-size: 2em;
+.gameControl button{
+    font-size: 2em;;
+}
+
+#stopButton{
+    display: none
 }
 
 .cardsleft{
@@ -114,16 +123,16 @@ body{
 
 .card{
     float:left;
-    height:332px;
-    width:241px;
-    margin: 20px;
+    width:40%;
+    margin:2.5%;
+    padding-bottom:53.2%;
     text-align: center;
     background-repeat: no-repeat;
+    background-size:cover;
     box-shadow: 5px 5px 5px #888888;
     border-bottom: 1px solid #636363;
     border-right: 1px solid #636363;
     border-radius: 10px;
-    background-image:url("images/0_cardback.PNG");
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -132,40 +141,48 @@ body{
     user-select: none;
 }
 
+/* Dit is troep. Dit kunnen we netter doen */
+.cardfiller{
+    width: 0;
+    box-shadow: 5px 5px 5px #eee;
+    border-bottom: 1px solid #eee;
+    border-right: 1px solid #eee;
+}
+
 .card:hover{
     cursor: pointer;
 }
 
 .guard{
-    background-image:url("images/1_Guard.PNG");
+    background-image:url("http://eelcobosklopper.com/Loveletter_afbeeldingen/1_Guard.PNG");
 }
 
 .priest{
-    background-image:url("images/2_Priest.PNG");
+    background-image:url("http://eelcobosklopper.com/Loveletter_afbeeldingen/2_Priest.PNG");
 }
 
 .baron{
-    background-image:url("images/3_Baron.PNG");
+    background-image:url("http://eelcobosklopper.com/Loveletter_afbeeldingen/3_Baron.PNG");
 }
 
 .handmaid{
-    background-image:url("images/4_Handmaid.PNG");
+    background-image:url("http://eelcobosklopper.com/Loveletter_afbeeldingen/4_Handmaid.PNG");
 }
 
 .prince{
-    background-image:url("images/5_Prince.PNG");
+    background-image:url("http://eelcobosklopper.com/Loveletter_afbeeldingen/5_Prince.PNG");
 }
 
 .king{
-    background-image:url("images/6_King.PNG");
+    background-image:url("http://eelcobosklopper.com/Loveletter_afbeeldingen/6_King.PNG");
 }
 
 .countess{
-    background-image:url("images/7_Countess.PNG");
+    background-image:url("http://eelcobosklopper.com/Loveletter_afbeeldingen/7_Countess.PNG");
 }
 
 .princess{
-    background-image:url("images/8_Princess.PNG");
+    background-image:url("http://eelcobosklopper.com/Loveletter_afbeeldingen/8_Princess.PNG");
 }
 
 .cardUnavailable{
@@ -175,14 +192,6 @@ body{
 
 /* ----- Notificaties  ----- */
 
-#gewonnen_bericht{
-    position: absolute;
-    text-align: center;
-    width: 60%;
-    font-size: 10em;
-    color: blue;
-}
-
 #notificatiebox{
     font-size: 1.5em;
     color: #000;
@@ -191,7 +200,7 @@ body{
     padding-left: 20px;
 }
 
-#gameinfobox{
+.infobox{
     font-size: 1.0em;
     color: #000;
     width: 90%;
@@ -199,5 +208,5 @@ body{
     text-align: left;
     padding-left: 20px;
     overflow-y: scroll;
-    max-height: 400px;
+    max-height: 300px;
 }
